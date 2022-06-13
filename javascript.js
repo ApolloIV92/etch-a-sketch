@@ -12,9 +12,19 @@ function populateBoxes() {
     }
 }
 
+function removePixels() {
+    while (largeBox.childElementCount > 0) {
+        largeBox.removeChild(largeBox.lastChild);
+    }
+    populateBoxes();
+}
+
 populateBoxes();
 
 const pixels = document.getElementsByClassName('pixel');
 for (const pixel of pixels) {
 pixel.addEventListener("mouseover", () => pixel.style.backgroundColor = "red");
 }
+
+const reset = document.getElementById("resetButton");
+reset.addEventListener("click", () => removePixels())
