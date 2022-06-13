@@ -3,6 +3,31 @@ body {
     flex-direction: column;
     align-items: center;
     flex: 0;
+    background-color: #5B84B1FF;
+    font-family: "Helvetica", sans-serif;
+}
+
+.headerText {
+    font-size: 40px;
+    font-weight: 400px;
+    text-shadow: 3px 3px #FC766AFF;
+}
+
+.colorsButton, #resetButton {
+    width: 100px;
+    height: 50px;
+    background-color: #FC766AFF;
+    border-color: black;
+    box-shadow: 0 0 0px;
+    border-radius: 14px;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#resetButton {
+    width: 300px;
+    font-size: 30px;
 }
 
 .settingsContainer {
@@ -11,7 +36,25 @@ body {
     border-style: solid;
     border-radius: 12px;
     margin-bottom: 10px;
+    border-width: thick;
+    
 }
+
+.colorsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    height:150px;
+    align-items: center;
+    justify-content: space-around;
+    border: solid;
+    border-radius: 12px;
+    margin: -5px;
+    padding: 0px;
+    column-gap: 10px;
+    border-width: thick;
+}
+
 
 .sketchContainer {
     width: 600px;
@@ -22,13 +65,21 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 20px;
     row-gap: 0px;
     column-gap: 0px;
+    background-clip: content-box;
+    box-shadow: inset 0 0 0 20px #FC766AFF;
 }
 
 .pixel {
-    background-color: red;
-    border-style: solid;
+    background-color: white;
+    border: 1px;
+    border-style: groove;
     box-sizing: border-box;
+    border-radius: 3px;
+}
+
+.pixel:hover {
+    background-color: black;
 }

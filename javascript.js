@@ -1,4 +1,3 @@
-
 const largeBox = document.querySelector(".sketchContainer");
 
 
@@ -14,3 +13,8 @@ function populateBoxes() {
 }
 
 populateBoxes();
+
+const pixels = document.getElementsByClassName('pixel');
+for (const pixel of pixels) {
+pixel.addEventListener("mouseover", () => pixel.style.backgroundColor = "red");
+}
