@@ -1,0 +1,34 @@
+body {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0;
+}
+
+.settingsContainer {
+    width: 800px;
+    height: 150px;
+    border-style: solid;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.sketchContainer {
+    width: 600px;
+    height: 600px;
+    border-style: solid;
+    border-radius: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    row-gap: 0px;
+    column-gap: 0px;
+}
+
+.pixel {
+    background-color: red;
+    border-style: solid;
+    box-sizing: border-box;
+}
