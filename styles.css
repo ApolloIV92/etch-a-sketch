@@ -13,9 +13,9 @@ body {
     text-shadow: 3px 3px #FC766AFF;
 }
 
-.colorsButton, #resetButton {
+.colorsButton, #resetButton, .blackButton {
     width: 100px;
-    height: 50px;
+    height: 65px;
     background-color: #FC766AFF;
     border-color: black;
     box-shadow: 0 0 0px;
@@ -28,6 +28,10 @@ body {
 #resetButton {
     width: 300px;
     font-size: 30px;
+}
+
+.colorsButton {
+
 }
 
 .settingsContainer {
@@ -54,7 +58,6 @@ body {
     column-gap: 10px;
     border-width: thick;
 }
-
 
 .sketchContainer {
     width: 600px;
