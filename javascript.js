@@ -1,10 +1,23 @@
 const largeBox = document.querySelector(".sketchContainer");
 const blackButton = document.querySelector(".blackButton");
 const colorPicker = document.querySelector(".colorChoice");
+const sizeBox = document.querySelector(".sizeTextContainer");
+const sizeText = document.createElement("p");
+sizeText.classList.add("sizeText");
+let gridSize = 16;
+sizeText.textContent = `Grid size: ${gridSize}x${gridSize}`;
+sizeBox.appendChild(sizeText);
+let slider = document.querySelector(".sizeSlider");
+slider.addEventListener("input", function() {
+    gridSize = slider.value;
+    sizeText.textContent = `Grid size: ${gridSize}x${gridSize}`;
+});
+slider.addEventListener("mouseup", () => resetGrid());
+
 let penColor = "black";
 colorPicker.addEventListener("input", () => penColor = colorPicker.value);
 blackButton.addEventListener("click", () => penColor = "black")
-let gridSize = prompt("How large of a grid?");
+
 
 
 
@@ -28,7 +41,7 @@ function resetGrid() {
     while (largeBox.childElementCount > 0) {
         largeBox.removeChild(largeBox.lastChild);
     }
-    gridSize = prompt("How many squares?");
+    gridSize = slider.value;
     populateBoxes();
     enableDrawing();
     }  

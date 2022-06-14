@@ -13,8 +13,13 @@ body {
     text-shadow: 3px 3px #FC766AFF;
 }
 
+.sizeText {
+    font-size: 32px;
+    font-weight: bold;
+}
+
 .colorsButton, #resetButton, .blackButton {
-    width: 100px;
+    width: 150px;
     height: 65px;
     background-color: #FC766AFF;
     border-color: black;
@@ -30,21 +35,17 @@ body {
     font-size: 30px;
 }
 
-.colorsButton {
-
-}
-
 .settingsContainer {
+    display: flex;
     width: 800px;
     height: 150px;
     border-style: solid;
     border-radius: 12px;
     margin-bottom: 10px;
     border-width: thick;
-    
 }
 
-.colorsContainer {
+.colorsContainer, .sizeContainer {
     display: flex;
     flex-wrap: wrap;
     width: 400px;
@@ -53,10 +54,56 @@ body {
     justify-content: space-around;
     border: solid;
     border-radius: 12px;
-    margin: -5px;
+    margin: -4px;
     padding: 0px;
     column-gap: 10px;
     border-width: thick;
+}
+
+
+.sizeSlider {
+    -webkit-appearance: none;
+    width: 85%;
+    height: 15px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.sizeSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; 
+    background: #FC766AFF;
+    cursor: pointer;
+}
+
+  .sizeSlider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #04AA6D;
+    cursor: pointer;
+}
+
+.sizeSlider:hover {
+    opacity: 1;
+}
+
+.sizeTextContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 100px;
+    background-color: #FC766AFF;
+    border: solid;
+    border-radius: 12px;
 }
 
 .sketchContainer {
